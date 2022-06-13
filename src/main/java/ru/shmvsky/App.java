@@ -1,13 +1,18 @@
 package ru.shmvsky;
 
-/**
- * Hello world!
- *
- */
+import java.io.IOException;
+
+import ru.shmvsky.server.Server;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        try {
+            new Server().start();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
